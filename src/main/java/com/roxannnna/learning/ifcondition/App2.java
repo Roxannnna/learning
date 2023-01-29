@@ -2,8 +2,7 @@ package com.roxannnna.learning.ifcondition;
 
 import java.util.Scanner;
 
-//https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
-public class App {
+public class App2 {
 
     public static void main(String[] args) {
         System.out.println("Type number: ");
