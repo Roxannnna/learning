@@ -5,6 +5,7 @@ public class AppMethodSeason {
     public static void main(String[] args) {
 
         System.out.println(isSpring(3, 20));
+        System.out.println(isSpring(4, 20));
     }
 
     static boolean isSpring(int month, int day) {

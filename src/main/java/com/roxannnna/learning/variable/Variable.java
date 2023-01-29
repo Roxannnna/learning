@@ -1,6 +1,5 @@
 package com.roxannnna.learning.variable;
 
-//https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
 public class Variable {
 
     public static void main(String[] args) {
