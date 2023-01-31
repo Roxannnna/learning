@@ -1,6 +1,12 @@
+# Push changes to Github
 cd /c/Users/roxys/Desktop/workspace/learning/
 git status
 git add .
 git commit -m "learning"
 git push
 git status
+
+
+# Pull changes from Github
+cd /c/Users/roxys/Desktop/workspace/learning/
+git pull
