@@ -20,7 +20,7 @@ public class Literal {
         methodPrints(12);
 
         //Aby zmusic kompilator by te liczbe traktowal jako long, dajemy na koncu L.
-        methodPrints(12L);
+        methodPrints(12_889L);
     }
 
     /*

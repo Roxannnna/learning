@@ -21,17 +21,28 @@ public class VariableInitializaton {
         //tu wpisalismy wartosci
         k[0] = 3;
         k[1] = 5;
+        int r = k[0] + k[1];
+        int result = r;
+
+        System.out.println("Sum:" + result);
 
         //Tablice mozna od razu zainicjalizowac, a potem wpisac dane.
         String[] l = new String[3];
         l[0] = "ALA";
         l[1] = "MA";
         l[2] = "KOTA";
+        String z = l[0] + l[1] + l[2];
+        System.out.println("Sentence without space: " + z);
+        System.out.println("Sentence with space: " + l[0] + " " + l[1]  + " " + l[2] + " ");
 
         //Mozna tez w inny sposob zainicjalizowac tablice:
-        // m[0] jest rowne 1;
-        // m[1] jest rowne 7;
-        // m[2] jest rowne 9;
         long[] m = {1, 7, 9};
+        m[0] = 1;
+        m[1] = 7;
+        m[2] = 9;
+        long c = m[0] + m[1] + m[2];
+        long result2 = c;
+        System.out.println("Sum long: " + result2);
+
     }
 }
