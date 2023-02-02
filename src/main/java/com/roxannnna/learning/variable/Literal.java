@@ -11,7 +11,7 @@ public class Literal {
         //dlatego uzyje metody, ktora przyjmuje long
         methodPrints(l);
 
-        //Kompilator wie, ze i to long, bo w lini 8 go zadeklarowalismy,
+        //Kompilator wie, ze i to int, bo w lini 8 go zadeklarowalismy,
         //dlatego uzyje metody, ktora przyjmuje int
         methodPrints(i);
 
