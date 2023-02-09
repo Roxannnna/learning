@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) {
 
         Author brendaClark = new Author("Brenda", "Clark");
-        brendaClark.
+        
 
         Book book1 = new Book(brendaClark, "Franklin i przyjaciele", 20, 1);
         book1.setTitle("Franking i nieprzyjaciele");
