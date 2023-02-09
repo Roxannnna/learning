@@ -28,8 +28,7 @@ public class TossCoin {
             static char getRandomChoiceFromUser() {
                 System.out.println("Podaj znak orzeł (o) lub reszka (r): ");
                 Scanner in = new Scanner(System.in);
-                int enteredChar = in.nextInt();
-                return enteredChar;
+                String enteredChar = String.valueOf(in.nextInt());
             }
             //To metoda losujaca orla ("O") lub reszke ("R").
             static String getRandomCoinHeadOrTail () {
