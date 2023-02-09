@@ -25,10 +25,9 @@ public class GuessNumber {
             if (userNumber > randomNumber) {
                 System.out.println("Liczba " + userNumber + " jest za wysoka!");
             }
-
             System.out.println("Liczba powtórzeń: " + num++);
-            System.out.println("Koniec programu");
         }
+        System.out.println("Koniec programu");
     }
 
     static int getRandomNumberInRange(int min, int max) {
