@@ -5,6 +5,7 @@ public class GuessNumber {
     public static void main(String[] args) {
         int minNumber = 1;
         int maxNumber = 100;
+        int num = 1;
         boolean guessed = false;
 
         System.out.println("Zagrajmy w gre - program wylosuje liczbe z zakresu od: " + minNumber + " do " + maxNumber);
@@ -25,13 +26,8 @@ public class GuessNumber {
                 System.out.println("Liczba " + userNumber + " jest za wysoka!");
             }
 
-        System.out.println("Koniec programu");
-
-            guessed = false;
-            int num = 1;
-            do {
-                System.out.println("Liczba powtórzeń: " + num++);
-            } while (guessed = false);
+            System.out.println("Liczba powtórzeń: " + num++);
+            System.out.println("Koniec programu");
         }
     }
 
