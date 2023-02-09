@@ -11,7 +11,7 @@ public class CoinToss {
             boolean guessed = false;
 
             System.out.println("Program rzuca monetą: ");
-            int randomChoice = getRandomCoinHeadOrTail(orzel, reszka);
+            String randomChoice = getRandomCoinHeadOrTail(orzel, reszka);
 
             System.out.println("Zgadnij co wylosował program orzeł (o) czy reszka (r)?: ");
 
