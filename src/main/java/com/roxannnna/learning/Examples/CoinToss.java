@@ -17,7 +17,7 @@ public class CoinToss {
 
             while (guessed == false) {
                 String userChar = getRandomChoiceFromUser();
-                if (randomChoice == userChar) {
+                if (userChar == randomChoice) {
                     System.out.println("Brawo, zgadleś!");
                     guessed = true;
                 } else {
