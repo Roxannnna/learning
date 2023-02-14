@@ -1,6 +1,6 @@
 package com.roxannnna.learning.objects.library;
 
-public class Book {
+public class  Book {
 
     Author author;
 

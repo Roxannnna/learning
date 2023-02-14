@@ -4,7 +4,7 @@ public class Modulo {
 
     public static void main(String[] args) {
         // 5 mod 2=1
-        //6 mod 2 = 0
+         //mod 2 = 0
         // 6 mod 4 = 2
 
         int x = 4;
