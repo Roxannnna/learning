@@ -16,7 +16,8 @@ public class LogIn {
                         )
         {
             JOptionPane.showMessageDialog(null, "Jesteś zalogowany");
-        } else {
+        }
+        else {
             JOptionPane.showMessageDialog(null,"Nie udało ci się zalogować");
         }
     }
