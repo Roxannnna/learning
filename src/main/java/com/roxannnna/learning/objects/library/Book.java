@@ -2,12 +2,12 @@ package com.roxannnna.learning.objects.library;
 
 public class  Book {
 
-    Author author;
+    private Author author;
 
-    String title;
+    private String title;
 
-    int pageNumbers;
-    int chapterNumbers;
+    private int pageNumbers;
+    private int chapterNumbers;
 
     public Book(Author author, String title, int pgNb, int chaptNb) {
         this.author = author;
@@ -24,6 +24,9 @@ public class  Book {
         this.title = title;
     }
 
+    public String getTitle() {
+        return title;
+    }
     @Override
     public String toString() {
         return "Book --" +
