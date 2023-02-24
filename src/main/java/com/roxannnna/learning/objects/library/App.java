@@ -12,14 +12,25 @@ public class App {
         libraryInPałecznica.addBook(book1);
         libraryInPałecznica.addBook(book2);
         libraryInPałecznica.addBook(book3);
-        System.out.println("Liczba książek w bibliotece w Pałczenicy: " + libraryInPałecznica.getNumberOfBooks());
-        System.out.println("Ilość HP i Czara Ognia: " + libraryInPałecznica.searchByTitle("HP i Czara Ognia"));
-        System.out.println("Ilość książek JK Rowling: " + libraryInPałecznica.searchByAuthor("JK","Rowling"));
+     //   System.out.println("Liczba książek w bibliotece w Pałczenicy: " + libraryInPałecznica.getNumberOfBooks());
+    //    System.out.println("Ilość HP i Czara Ognia: " + libraryInPałecznica.searchByTitle("HP i Czara Ognia"));
+     //   System.out.println("Ilość książek JK Rowling: " + libraryInPałecznica.searchByAuthor("JK","Rowling"));
 
-        Reader reader1 = new Reader("Roksana", "Skinderowicz", 12345);
+        Reader reader1 = new Reader("Roksana", "Skinderowicz");
         libraryInPałecznica.addReader(reader1);
 
+        Reader reader2 = new Reader("Krystian", "Skinderowicz");
+        libraryInPałecznica.addReader(reader2);
+    //    System.out.println("ID Roksany: " + reader1.getId());
+    //    System.out.println("ID Krystiana: " + reader2.getId());
+
         libraryInPałecznica.getReaderByName("Roksana");
-        System.out.println("Ilość czytelników o imieniu Roksana: " +libraryInPałecznica.getReaderByName("Roksana"));
+    //    System.out.println("Ilość czytelników o imieniu Roksana: " +libraryInPałecznica.getReaderByName("Roksana"));
+
+
+        libraryInPałecznica.borrowBook("Franklin i przyjaciele");
+       // libraryInPałecznica.printBooks();
+        libraryInPałecznica.printAvailableBooks();
     }
+
 }

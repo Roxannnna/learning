@@ -60,4 +60,24 @@ public class Library {
         }
         return n;
     }
+    public void printBooks() {
+        for (Book book : books){
+            System.out.println(book);
+        }
+    }
+    public void printAvailableBooks(){
+        for (Book b : books) {
+            if (b.isReserved()==false){
+                System.out.println(b);
+            }
+        }
+    }
+    public void borrowBook(String title) {
+        int n = 0;
+        for (Book b : books) {
+            if (title.equals(b.getTitle())) {
+               b.borrow();
+            }
+        }
+    }
 }

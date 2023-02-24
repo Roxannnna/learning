@@ -1,24 +1,16 @@
 package com.roxannnna.learning.objects.library;
 
-public class Reader {
-    //atrybuty
-    private String name;
-    private String surname;
+public class Reader extends Person{
+    private static int idGenerator = 100000;
+
     private int id;
     //konstruktor
-    public Reader(String name, String surname, int id) {
-        this.name = name;
-        this.surname = surname;
-        this.id = id;
+    public Reader(String name, String surname) {
+        super(name, surname);
+        this.id = idGenerator;
+        idGenerator ++;
     }
     //metody zwracające dane z atrybutów konstruktora
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
     public int getId() { return id; }
 
 }

@@ -1,21 +1,10 @@
 package com.roxannnna.learning.objects.library;
 
-public class Author {
-//atrybuty
-    private String name;
-    private String surname;
+public class Author extends Person {
+
 //konstruktor
     public Author(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-//metody
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
+     super(name, surname);
     }
 
     @Override
