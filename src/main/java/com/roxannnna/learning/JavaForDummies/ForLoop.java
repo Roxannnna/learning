@@ -15,13 +15,13 @@ public class ForLoop {
         //    System.out.println(total);
       //  for (int row = 0; row < 5; row++) {
       //      for (int column = 0; column < 5; column++) {
-       //         System.out.println("*");
+       //         System.out.print("*");
        //     }
        //     System.out.println();
        // }
 
       //  for (int nb = 0; nb < 5; nb++) {
-            for (int row = 0; row < 5; row++) {
+            for (int row = 0; row <= 5; row++) {
                     if (row == 1){
                          System.out.println("*");
                 }
