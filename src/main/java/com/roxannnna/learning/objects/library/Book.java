@@ -9,14 +9,14 @@ public class  Book {
 
     private int pageNumbers;
     private int chapterNumbers;
-    private boolean reserved;
+    private BooksState state;
 //konstruktor
     public Book(Author author, String title, int pgNb, int chaptNb) {
         this.author = author;
         this.title = title;
         this.pageNumbers = pgNb;
         this.chapterNumbers = chaptNb;
-        this.reserved = false;
+        this.state = BooksState.AVAILABLE;
     }
 //metody
     public Author getAuthor() {
@@ -31,16 +31,14 @@ public class  Book {
         return title;
     }
 
-    public boolean isReserved() {
-        return reserved;
+    public BooksState getState() {
+        return state;
     }
-    public boolean borrow() {
-        reserved = true;
-        return reserved;
+    public void borrow() {
+        state = BooksState.BORROWED;
     }
-    public boolean unborrow() {
-        reserved = false;
-        return reserved;
+    public void unborrow() {
+        state = BooksState.AVAILABLE;
     }
 
     public String toString() {
@@ -49,6 +47,6 @@ public class  Book {
                 ", title='" + title + '\'' +
                 ", pageNumbers=" + pageNumbers +
                 ", chapterNumbers=" + chapterNumbers +
-                ", reserved = " + reserved;
+                ", State = " + state;
     }
 }

@@ -67,7 +67,7 @@ public class Library {
     }
     public void printAvailableBooks(){
         for (Book b : books) {
-            if (b.isReserved()==false){
+            if (b.getState()==BooksState.AVAILABLE){
                 System.out.println(b);
             }
         }

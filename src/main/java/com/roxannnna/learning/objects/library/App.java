@@ -31,6 +31,8 @@ public class App {
         libraryInPałecznica.borrowBook("Franklin i przyjaciele");
        // libraryInPałecznica.printBooks();
         libraryInPałecznica.printAvailableBooks();
+        BookDataBase b = new BookDataBase();
+        b.addBooks(book1, book2, book3);
     }
 
 }
