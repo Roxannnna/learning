@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class Example {
         public static void main(String[] args) {
-            List<String> nameList = new ArrayList<>();
-            List<String> surnameList = new ArrayList<>();
+            List<Person> personList = new ArrayList<>();
 
             JFrame frame = new JFrame("Title");
             frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -24,29 +23,53 @@ public class Example {
             JTextField surnameTextField = new JTextField(30);
             surnameTextField.setBounds(80, 50, 300, 20);
 
+            JLabel ageLabel = new JLabel("Age: ");
+            ageLabel.setBounds(10, 75,  60, 20);
+            JTextField ageTextField = new JTextField(30);
+            ageTextField.setBounds(80, 75, 300, 20);
+
+            JLabel genderLabel = new JLabel("Gender: ");
+            genderLabel.setBounds(10, 100,  60, 20);
+            String[] genderArray = {" ","Female", "Male", "Other" };
+            JComboBox genderComboBox = new JComboBox(genderArray);
+            genderComboBox.setBounds(80, 100, 300, 20);
+
             JButton saveButton = new JButton("Save");
-            saveButton.setBounds(10, 100, 100, 20);
+            saveButton.setBounds(10, 150, 100, 20);
 
             JLabel printLabel = new JLabel();
             printLabel.setBounds(10, 200,  400, 200);
             JButton printButton = new JButton("Print All");
-            printButton.setBounds(10, 150, 100, 20);
+            printButton.setBounds(10, 175, 100, 20);
 
 
             saveButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    nameList.add(nameTextField.getText());
-                    surnameList.add(surnameTextField.getText());
+                    String age = ageTextField.getText();
+                    try {
+                        int ageInt = Integer.parseInt(age);
+                        Person person = new Person(nameTextField.getText(),surnameTextField.getText(),ageInt,genderComboBox.getSelectedItem().toString());
+                        if (person.getName().isEmpty() || person.getSurname().isEmpty()){
+                            printLabel.setText("Proszę wpisać poprawne dane!");
+                            printLabel.setForeground(Color.RED);
+                        } else {
+                            personList.add(person);
+                        }
+                    } catch (NumberFormatException ex){
+                        printLabel.setText("Proszę wpisać poprawny wiek!");
+                        printLabel.setForeground(Color.RED);
+                    }
                     nameTextField.setText("");
                     surnameTextField.setText("");
-                    printLabel.setText("");
+                    ageTextField.setText("");
                 }
             });
             printButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    printLabel.setText("Names: " + nameList + ", Surnames: " + surnameList);
+                    printLabel.setText("People: " + personList);
+                    printLabel.setForeground(Color.BLACK);
                 }
             });
 
@@ -56,10 +79,14 @@ public class Example {
             panel.add(nameTextField);
             panel.add(surnameLabel);
             panel.add(surnameTextField);
+            panel.add(ageLabel);
+            panel.add(ageTextField);
             panel.add(saveButton);
             panel.add(printLabel);
             panel.add(printButton);
             panel.setBackground(Color.LIGHT_GRAY);
+            panel.add(genderLabel);
+            panel.add(genderComboBox);
 
             frame.add(panel);
             frame.setVisible(true);

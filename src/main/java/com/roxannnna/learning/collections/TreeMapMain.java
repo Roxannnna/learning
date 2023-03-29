@@ -7,6 +7,9 @@ public class TreeMapMain {
         TreeMap<Integer,String> treeMap = new TreeMap<>();
         treeMap.put(1,"Tree");
         treeMap.put(2,"Map");
+        treeMap.put(5,"cokolwiek");
+        System.out.println(treeMap.get(2));
         System.out.println(treeMap);
+
     }
 }

@@ -9,8 +9,9 @@ public class TreeSetMain {
         treeSet.add("Krystian");
         treeSet.add("Barbara");
         treeSet.add("Patryk");
-        treeSet.add("Łucja");
+        treeSet.add("Lucja");
         treeSet.add("Laurka");
         System.out.println(treeSet);
+
     }
 }

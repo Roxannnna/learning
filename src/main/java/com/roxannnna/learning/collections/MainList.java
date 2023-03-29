@@ -16,5 +16,6 @@ public class MainList {
         System.out.println(l.get(1));
         l.set(2,"Dropsik");
         System.out.println(l);
+        System.out.println(l.get(1));
     }
 }
