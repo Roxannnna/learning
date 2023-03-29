@@ -4,17 +4,25 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main (String [] args) {
-        Cat Puchacz = new Cat("Puchacz", 2);
+        Cat puchacz = new Cat("puchacz", 2);
 
-        Dog Kraker = new Dog("Kraker",14);
+        Dog kraker = new Dog("kraker",14);
 
-        Puchacz.makeNoise();
-        Puchacz.printName();
-        System.out.println("Wiek Puchacza: " +Puchacz.age);
+        puchacz.makeNoise();
+        puchacz.printName();
+        System.out.println("Wiek Puchacza: " +puchacz.age);
 
-        Kraker.makeNoise();
-        Kraker.printName();
-        System.out.println("Wiek Krakusia: " + Kraker.age);
+        kraker.makeNoise();
+        kraker.printName();
+        System.out.println("Wiek Krakusia: " + kraker.age);
+        display(kraker);
+        swim(kraker);
+    }
+    public static void display(Animal animal){
+        animal.printName();
+    }
+    public static void swim(Swimable swimable){
+        swimable.swim();
     }
 
 }
