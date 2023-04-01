@@ -1,8 +1,13 @@
 package com.roxannnna.learning.exception;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class FileNotFndExc extends Throwable {
     public static void main(String[] args) {
-      /*  Scanner diskScanner = null;
+        Scanner diskScanner = null;
         try {
             diskScanner = new Scanner(new File("numbers.txt"));
         } catch (FileNotFoundException e) {
@@ -35,6 +40,6 @@ public class FileNotFndExc extends Throwable {
                 System.out.println("Divide by zero on array index " + i);
             }
             diskScanner.close();
-        }*/
+        }
     }
 }

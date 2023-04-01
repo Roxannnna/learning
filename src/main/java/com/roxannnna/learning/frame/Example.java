@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 public class Example {
@@ -55,10 +57,15 @@ public class Example {
                             printLabel.setForeground(Color.RED);
                         } else {
                             personList.add(person);
+                            FileSaver fileSaver = new FileSaver();
+                            fileSaver.save(person);
                         }
                     } catch (NumberFormatException ex){
                         printLabel.setText("Proszę wpisać poprawny wiek!");
                         printLabel.setForeground(Color.RED);
+                    }
+                    catch (FileNotFoundException ex){
+                        ex.printStackTrace();
                     }
                     nameTextField.setText("");
                     surnameTextField.setText("");
