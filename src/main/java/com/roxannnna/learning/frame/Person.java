@@ -3,10 +3,10 @@ package com.roxannnna.learning.frame;
 import java.io.Serializable;
 
 public class Person implements Serializable {
-    String name;
-    String surname;
-    int age;
-    String gender;
+   private String name;
+   private String surname;
+   private int age;
+   private String gender;
     public Person(String name, String surname, int age, String gender){
         this.name = name;
         this.surname = surname;
